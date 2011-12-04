@@ -1,0 +1,266 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8ACD5A2E148B8EEF0009EE4D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACD5A2D148B8EEF0009EE4D /* UIKit.framework */; };
+		8ACD5A30148B8EEF0009EE4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACD5A2F148B8EEF0009EE4D /* Foundation.framework */; };
+		8ACD5A32148B8EEF0009EE4D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACD5A31148B8EEF0009EE4D /* CoreGraphics.framework */; };
+		8ACD5A38148B8EEF0009EE4D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8ACD5A36148B8EEF0009EE4D /* InfoPlist.strings */; };
+		8ACD5A3A148B8EEF0009EE4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD5A39148B8EEF0009EE4D /* main.m */; };
+		8ACD5A3E148B8EEF0009EE4D /* VUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD5A3D148B8EEF0009EE4D /* VUAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8ACD5A29148B8EEF0009EE4D /* UIWebView-Remote-Inspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIWebView-Remote-Inspector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ACD5A2D148B8EEF0009EE4D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8ACD5A2F148B8EEF0009EE4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8ACD5A31148B8EEF0009EE4D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8ACD5A35148B8EEF0009EE4D /* UIWebView-Remote-Inspector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIWebView-Remote-Inspector-Info.plist"; sourceTree = "<group>"; };
+		8ACD5A37148B8EEF0009EE4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8ACD5A39148B8EEF0009EE4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8ACD5A3B148B8EEF0009EE4D /* UIWebView-Remote-Inspector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView-Remote-Inspector-Prefix.pch"; sourceTree = "<group>"; };
+		8ACD5A3C148B8EEF0009EE4D /* VUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VUAppDelegate.h; sourceTree = "<group>"; };
+		8ACD5A3D148B8EEF0009EE4D /* VUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VUAppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8ACD5A26148B8EEF0009EE4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ACD5A2E148B8EEF0009EE4D /* UIKit.framework in Frameworks */,
+				8ACD5A30148B8EEF0009EE4D /* Foundation.framework in Frameworks */,
+				8ACD5A32148B8EEF0009EE4D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8ACD5A1E148B8EEE0009EE4D = {
+			isa = PBXGroup;
+			children = (
+				8ACD5A33148B8EEF0009EE4D /* UIWebView-Remote-Inspector */,
+				8ACD5A2C148B8EEF0009EE4D /* Frameworks */,
+				8ACD5A2A148B8EEF0009EE4D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8ACD5A2A148B8EEF0009EE4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8ACD5A29148B8EEF0009EE4D /* UIWebView-Remote-Inspector.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8ACD5A2C148B8EEF0009EE4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8ACD5A2D148B8EEF0009EE4D /* UIKit.framework */,
+				8ACD5A2F148B8EEF0009EE4D /* Foundation.framework */,
+				8ACD5A31148B8EEF0009EE4D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8ACD5A33148B8EEF0009EE4D /* UIWebView-Remote-Inspector */ = {
+			isa = PBXGroup;
+			children = (
+				8ACD5A3C148B8EEF0009EE4D /* VUAppDelegate.h */,
+				8ACD5A3D148B8EEF0009EE4D /* VUAppDelegate.m */,
+				8ACD5A34148B8EEF0009EE4D /* Supporting Files */,
+			);
+			path = "UIWebView-Remote-Inspector";
+			sourceTree = "<group>";
+		};
+		8ACD5A34148B8EEF0009EE4D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8ACD5A35148B8EEF0009EE4D /* UIWebView-Remote-Inspector-Info.plist */,
+				8ACD5A36148B8EEF0009EE4D /* InfoPlist.strings */,
+				8ACD5A39148B8EEF0009EE4D /* main.m */,
+				8ACD5A3B148B8EEF0009EE4D /* UIWebView-Remote-Inspector-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8ACD5A28148B8EEF0009EE4D /* UIWebView-Remote-Inspector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8ACD5A41148B8EEF0009EE4D /* Build configuration list for PBXNativeTarget "UIWebView-Remote-Inspector" */;
+			buildPhases = (
+				8ACD5A25148B8EEF0009EE4D /* Sources */,
+				8ACD5A26148B8EEF0009EE4D /* Frameworks */,
+				8ACD5A27148B8EEF0009EE4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UIWebView-Remote-Inspector";
+			productName = "UIWebView-Remote-Inspector";
+			productReference = 8ACD5A29148B8EEF0009EE4D /* UIWebView-Remote-Inspector.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8ACD5A20148B8EEE0009EE4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Extessy AG";
+			};
+			buildConfigurationList = 8ACD5A23148B8EEE0009EE4D /* Build configuration list for PBXProject "UIWebView-Remote-Inspector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8ACD5A1E148B8EEE0009EE4D;
+			productRefGroup = 8ACD5A2A148B8EEF0009EE4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8ACD5A28148B8EEF0009EE4D /* UIWebView-Remote-Inspector */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8ACD5A27148B8EEF0009EE4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ACD5A38148B8EEF0009EE4D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8ACD5A25148B8EEF0009EE4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ACD5A3A148B8EEF0009EE4D /* main.m in Sources */,
+				8ACD5A3E148B8EEF0009EE4D /* VUAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8ACD5A36148B8EEF0009EE4D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8ACD5A37148B8EEF0009EE4D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8ACD5A3F148B8EEF0009EE4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		8ACD5A40148B8EEF0009EE4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8ACD5A42148B8EEF0009EE4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIWebView-Remote-Inspector/UIWebView-Remote-Inspector-Prefix.pch";
+				INFOPLIST_FILE = "UIWebView-Remote-Inspector/UIWebView-Remote-Inspector-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8ACD5A43148B8EEF0009EE4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIWebView-Remote-Inspector/UIWebView-Remote-Inspector-Prefix.pch";
+				INFOPLIST_FILE = "UIWebView-Remote-Inspector/UIWebView-Remote-Inspector-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8ACD5A23148B8EEE0009EE4D /* Build configuration list for PBXProject "UIWebView-Remote-Inspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ACD5A3F148B8EEF0009EE4D /* Debug */,
+				8ACD5A40148B8EEF0009EE4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8ACD5A41148B8EEF0009EE4D /* Build configuration list for PBXNativeTarget "UIWebView-Remote-Inspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ACD5A42148B8EEF0009EE4D /* Debug */,
+				8ACD5A43148B8EEF0009EE4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8ACD5A20148B8EEE0009EE4D /* Project object */;
+}
