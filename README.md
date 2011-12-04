@@ -5,6 +5,9 @@ This app enables you to use the WebInspector for webpages directly on
 your iOS device. It presents the webpage under test and the WebInspector
 in two distinct web views, swiping switches between the two.
 
+Note: The URL for the webpage under test is hardcoded as a define in the
+app delegate.
+
 Thanks to [Nathan de Vries][1] for some inspiration.
 
 --

@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface VUWebView : NSObject
+@protocol VUSwipeDelegate <NSObject>
+
+-(void)swipedLeftInView:(UIView*)view;
+-(void)swipedRightInView:(UIView*)view;
+
+@end
+
+#pragma mark -
+
+@interface VUWebView : UIWebView
+
+@property (nonatomic, weak) id<VUSwipeDelegate> swipeDelegate;
 
 @end

@@ -3,61 +3,72 @@
 //  UIWebView-Remote-Inspector
 //
 //  Created by Boris Bügling on 04.12.11.
-//  Copyright (c) 2011 Extessy AG. All rights reserved.
+//  Copyright (c) 2011 Crocodil.us. All rights reserved.
 //
 
 #import "VUAppDelegate.h"
+#import "VUWebController.h"
+
+#define URL_TO_DEBUG        @"http://www.apple.com"
 
 @implementation VUAppDelegate
 
-@synthesize window = _window;
+@synthesize debugWebController;
+@synthesize inspectorServer;
+@synthesize mainWebController;
+@synthesize window;
+
+#pragma mark -
+
+- (void) enableRemoteWebInspector 
+{
+    self.inspectorServer = [[NSClassFromString(@"WebInspectorServerHTTP") alloc] init];
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+    [self.inspectorServer performSelector:NSSelectorFromString(@"start")];
+#pragma clang diagnostic pop
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
+    [self enableRemoteWebInspector];
+    
+    self.debugWebController = [[VUWebController alloc] init];
+    self.mainWebController = [[VUWebController alloc] init];
+    
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = self.mainWebController;
+    
     [self.window makeKeyAndVisible];
+    [self.mainWebController performSelector:@selector(openURL:) withObject:[NSURL URLWithString:URL_TO_DEBUG] afterDelay:0.1];
+    
+    self.mainWebController.webView.swipeDelegate = self;
+    
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    /*
-     Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-     Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-     */
+#pragma mark -
+#pragma mark VUSwipeDelegate methods
+
+-(void)swipedLeftInView:(UIView *)view {
+    [self swipedRightInView:view];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-     If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-     */
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    /*
-     Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-     */
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    /*
-     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-     */
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    /*
-     Called when the application is about to terminate.
-     Save data if appropriate.
-     See also applicationDidEnterBackground:.
-     */
+-(void)swipedRightInView:(UIView *)view {
+    if (view == self.mainWebController.webView) {
+        [self.window.rootViewController presentModalViewController:self.debugWebController animated:YES];
+    } else {
+        [self.window.rootViewController dismissModalViewControllerAnimated:YES];
+    }
+    
+    if (!self.debugWebController.webView.swipeDelegate) {
+        self.debugWebController.webView.swipeDelegate = self;
+        
+        [self.debugWebController openURL:[NSURL URLWithString:@"http://localhost:9999"]];
+    }
 }
 
 @end

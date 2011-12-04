@@ -10,9 +10,11 @@
 		8ACD5A2E148B8EEF0009EE4D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACD5A2D148B8EEF0009EE4D /* UIKit.framework */; };
 		8ACD5A30148B8EEF0009EE4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACD5A2F148B8EEF0009EE4D /* Foundation.framework */; };
 		8ACD5A32148B8EEF0009EE4D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACD5A31148B8EEF0009EE4D /* CoreGraphics.framework */; };
-		8ACD5A38148B8EEF0009EE4D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8ACD5A36148B8EEF0009EE4D /* InfoPlist.strings */; };
 		8ACD5A3A148B8EEF0009EE4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD5A39148B8EEF0009EE4D /* main.m */; };
 		8ACD5A3E148B8EEF0009EE4D /* VUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD5A3D148B8EEF0009EE4D /* VUAppDelegate.m */; };
+		8ACD5A4A148B90050009EE4D /* VUWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD5A49148B90050009EE4D /* VUWebController.m */; };
+		8ACD5A4E148B91210009EE4D /* VUWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD5A4D148B91210009EE4D /* VUWebView.m */; };
+		8ACD5A50148BF9360009EE4D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACD5A4F148BF9360009EE4D /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +23,15 @@
 		8ACD5A2F148B8EEF0009EE4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8ACD5A31148B8EEF0009EE4D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8ACD5A35148B8EEF0009EE4D /* UIWebView-Remote-Inspector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIWebView-Remote-Inspector-Info.plist"; sourceTree = "<group>"; };
-		8ACD5A37148B8EEF0009EE4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8ACD5A39148B8EEF0009EE4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8ACD5A3B148B8EEF0009EE4D /* UIWebView-Remote-Inspector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView-Remote-Inspector-Prefix.pch"; sourceTree = "<group>"; };
 		8ACD5A3C148B8EEF0009EE4D /* VUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VUAppDelegate.h; sourceTree = "<group>"; };
 		8ACD5A3D148B8EEF0009EE4D /* VUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VUAppDelegate.m; sourceTree = "<group>"; };
+		8ACD5A48148B90050009EE4D /* VUWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VUWebController.h; sourceTree = "<group>"; };
+		8ACD5A49148B90050009EE4D /* VUWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VUWebController.m; sourceTree = "<group>"; };
+		8ACD5A4C148B91210009EE4D /* VUWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VUWebView.h; sourceTree = "<group>"; };
+		8ACD5A4D148B91210009EE4D /* VUWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VUWebView.m; sourceTree = "<group>"; };
+		8ACD5A4F148BF9360009EE4D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +68,9 @@
 		8ACD5A2C148B8EEF0009EE4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8ACD5A2D148B8EEF0009EE4D /* UIKit.framework */,
-				8ACD5A2F148B8EEF0009EE4D /* Foundation.framework */,
 				8ACD5A31148B8EEF0009EE4D /* CoreGraphics.framework */,
+				8ACD5A2F148B8EEF0009EE4D /* Foundation.framework */,
+				8ACD5A2D148B8EEF0009EE4D /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -74,6 +80,10 @@
 			children = (
 				8ACD5A3C148B8EEF0009EE4D /* VUAppDelegate.h */,
 				8ACD5A3D148B8EEF0009EE4D /* VUAppDelegate.m */,
+				8ACD5A48148B90050009EE4D /* VUWebController.h */,
+				8ACD5A49148B90050009EE4D /* VUWebController.m */,
+				8ACD5A4C148B91210009EE4D /* VUWebView.h */,
+				8ACD5A4D148B91210009EE4D /* VUWebView.m */,
 				8ACD5A34148B8EEF0009EE4D /* Supporting Files */,
 			);
 			path = "UIWebView-Remote-Inspector";
@@ -82,9 +92,9 @@
 		8ACD5A34148B8EEF0009EE4D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8ACD5A35148B8EEF0009EE4D /* UIWebView-Remote-Inspector-Info.plist */,
-				8ACD5A36148B8EEF0009EE4D /* InfoPlist.strings */,
+				8ACD5A4F148BF9360009EE4D /* Icon.png */,
 				8ACD5A39148B8EEF0009EE4D /* main.m */,
+				8ACD5A35148B8EEF0009EE4D /* UIWebView-Remote-Inspector-Info.plist */,
 				8ACD5A3B148B8EEF0009EE4D /* UIWebView-Remote-Inspector-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -117,7 +127,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
-				ORGANIZATIONNAME = "Extessy AG";
+				ORGANIZATIONNAME = Crocodil.us;
 			};
 			buildConfigurationList = 8ACD5A23148B8EEE0009EE4D /* Build configuration list for PBXProject "UIWebView-Remote-Inspector" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -141,7 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ACD5A38148B8EEF0009EE4D /* InfoPlist.strings in Resources */,
+				8ACD5A50148BF9360009EE4D /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,21 +164,12 @@
 			files = (
 				8ACD5A3A148B8EEF0009EE4D /* main.m in Sources */,
 				8ACD5A3E148B8EEF0009EE4D /* VUAppDelegate.m in Sources */,
+				8ACD5A4A148B90050009EE4D /* VUWebController.m in Sources */,
+				8ACD5A4E148B91210009EE4D /* VUWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8ACD5A36148B8EEF0009EE4D /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8ACD5A37148B8EEF0009EE4D /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8ACD5A3F148B8EEF0009EE4D /* Debug */ = {
@@ -259,6 +260,7 @@
 				8ACD5A43148B8EEF0009EE4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
